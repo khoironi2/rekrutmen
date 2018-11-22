@@ -41,7 +41,7 @@
 
 				$this->sendEmailToPelamar($email_pelamar, $password_pelamar);
 
-				 $this->sendEmailToPelamar($email_pelamar, $password_pelamar);
+				
 
 				echo "Joosss";
 			}

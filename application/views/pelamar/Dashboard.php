@@ -23,3 +23,10 @@
 						</table>
 <h1>Anda login sebagai :<?php echo $this->session->userdata('nama_pelamar'); ?></h1>
 <a href="<?php echo site_url('pelamar/Auth/logOut') ?>">Logout</a>
+<form>
+	<input type="text" name="nama_pelamar" value="<?php echo $pelamar->nama_pelamar; ?>">
+	<input type="password" name="alamat_pelamar" value="<?php echo $pelamar->alamat_pelamar; ?>">
+	<input type="text" name="email_pelamar" value="<?php echo $pelamar->email_pelamar; ?>">
+	<input type="password" name="email_pelamar"  value="<?php echo $pelamar->password_pelamar; ?>">
+	
+</form>

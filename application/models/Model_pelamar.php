@@ -2,7 +2,6 @@
 
 class Model_pelamar extends CI_Model{
 	
-
 	public function insertPelamar($data) {
 		$this->db->insert('pelamar', $data);
 
@@ -43,7 +42,6 @@ class Model_pelamar extends CI_Model{
 		return $result->result();
 	}
 
-
 	public function getClientById($id_client) {
 		$this->db->select('*');
 		$this->db->from('tbl_client');
@@ -53,7 +51,6 @@ class Model_pelamar extends CI_Model{
 
 		return $result->row();
 	}
-
 
 	// Fungsi Ini di gunakan untuk melakukan update data terhadap tabel tbl_client
 	public function updateDataPelamar($id_pelamar, $data) {
