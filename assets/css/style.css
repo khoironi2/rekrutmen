@@ -5,4 +5,71 @@ body {
 
 h1 {
 	color: #636e72;
+<<<<<<< HEAD
+=======
+}
+
+/* Navbar */
+.navbar {
+    z-index: 9;
+    margin-top: 10px;
+}
+
+.nav-link {
+    margin-right: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.info {
+    background-color: #e0e0e0;
+    border-bottom: 1px solid rgb(165, 165, 165); 
+    height: 140px;
+}
+
+.info a {
+    font-size: 20px
+}
+
+.hr-article {
+    width: 150px;
+    height: 1px;
+    background-color: red;
+    margin-left: 0;
+}
+
+
+
+
+
+
+
+/* Utility */
+.tombol {
+    border-radius: 40px;
+    margin: 3px;
+}
+
+
+@media (min-width: 992px) { 
+    
+    /* navbar */
+    .nav-link {
+        text-transform: uppercase;
+        color: white !important;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+    }
+
+    .tombol {
+        border-radius: 40px;
+        border: 1.5px solid white;
+        color: white;
+    }
+
+    .carousel {
+        margin-top: -65px;
+    }
+
+
+>>>>>>> 5c7b30f878f35ed6c1ccbf42a126e8f7347f7eb7
 }

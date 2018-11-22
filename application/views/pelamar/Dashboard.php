@@ -1,4 +1,5 @@
 <div class="table-responsive">
+
 						<table class="table" >
 							<tr>
 								<td style="text-align: center;">
