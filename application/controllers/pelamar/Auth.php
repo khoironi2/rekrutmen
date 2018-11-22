@@ -38,7 +38,7 @@
 									'email_pelamar'	=> $this->input->post('email_pelamar'),
 									'password_pelamar'	=> $this->input->post('password_pelamar'));
 				$this->Model_pelamar->insertPelamar($datapelamar);
-				$this->sendEmailToPelamar($email_pelamar, $password_pelamar);
+				// $this->sendEmailToPelamar($email_pelamar, $password_pelamar);
 				echo "Joosss";
 			}
 			redirect('pelamar/Auth/LoginPelamar');
