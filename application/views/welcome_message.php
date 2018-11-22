@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
 
             <div class="navbar-nav ml-auto">
-                  <a class="nav-item btn btn-outline-danger tombol" href="#">Sig In</a>
+                  <a class="nav-item btn btn-outline-danger tombol" href="<?php echo site_url('pelamar/auth') ?>">Sig In</a>
                   <a class="nav-item btn btn-outline-danger tombol" href="#">Create Account</a>
             </div>
          </div>
