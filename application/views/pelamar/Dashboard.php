@@ -1,32 +1,195 @@
-<div class="table-responsive">
 
-						<table class="table" >
-							<tr>
-								<td style="text-align: center;">
-									<?php if($pelamar->pas_foto != "") { ?>
-										<img src="<?php echo base_url('assets/upload/pelamar/img/'.$pelamar->pas_foto)?>" alt="Gambar Profile" height="90px">
-										
-									<?php } else { ?>
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Edit Profile</h4>
+                            </div>
+                            <div class="content">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="form-group">
+                                                <label>Alamat Email</label>
+                                                <input type="text" class="form-control" disabled placeholder="Company" value="<?php echo $pelamar->email_pelamar; ?>">
+                                            </div>
+                                        </div>
+                                       
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Telpon</label>
+                                                <input type="email" class="form-control" value="<?php echo $pelamar->notelp_pelamar; ?>">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Nama Lengkap</label>
+                                                <input type="text" class="form-control" placeholder="Company" value="<?php echo $pelamar->nama_pelamar; ?>">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>kewarganegaraan</label>
+                                                <input type="text" class="form-control" placeholder="Indonesia" value="<?php echo $pelamar->kewarganegaraan; ?>">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Alamat KTP</label>
+                                                <input type="text" class="form-control" placeholder="Home Address" value="<?php echo $pelamar->alamat_pelamar ?>">
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Alamat Domisili</label>
+                                                <input type="text" class="form-control" placeholder="Home Address" value="<?php echo $pelamar->alamat_domisili ?>">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label>Umur</label>
+                                                <input type="text" class="form-control" placeholder="Umur" value="<?php echo $pelamar->umur_pelamar ?>">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>status</label>
+                                                <select name="status_pelamar" class="form-control">
+                                                	<option class="form-control"><?php echo $pelamar->status_pelamar ?></option>
+                                                	<option class="form-control">Lajang</option>
+                                                	<option>Menikah</option>
+                                                	<option>Duda</option>
+                                                </select>
+                                               
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Tanggal Lahir</label>
+                                                <input type="date" class="form-control" value="<?php echo $pelamar->tgl_lahir_pelamar ?>">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                        	<div class="form-group">
+                                        		<label>Jenis Kelamin</label>
+                                        		<select class="form-control" name="jenis_kelamin_pelamar">
+                                        			<option><?php echo $pelamar->jenis_kelamin_pelamar; ?></option>
+                                        			<option>Laki - Laki</option>
+                                        			<option>Perempuan</option>
+                                        		</select>
+                                        	</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                    	<div class="col-md-3">
+                                    		<div class="form-group">
+                                    			<label>Tinggi Badan</label>
+                                    			<input placeholder="172" type="text" name="tinggi_badan" class="form-control" value="<?php echo $pelamar->tinggi_badan ?>">
+                                    		</div>
+                                    	</div>
+                                    	<div class="col-md-3">
+                                    		<div class="form-group">
+                                    			<label>Berat Badan</label>
+                                    			<input placeholder="75" type="text" name="berat_badan" class="form-control" value="<?php echo $pelamar->berat_badan ?>">
+                                    		</div>
+                                    	</div>
+                                    	<div class="col-md-4">
+                                    		<div class="form-group">
+                                    			<label>Agama</label>
+                                    			<select class="form-control" name="id_agama">
+                                    				<option>Islam</option>
+                                    			</select>
+                                    		</div>
+                                    	</div>
+                                    	<div class="col-md-2">
+                                    		<div class="form-group">
+                                    			<label>Gol Darah</label>
+                                    			<select class="form-control" name="id_agama">
+                                    				<option><?php echo $pelamar->gol_darah; ?></option>
+                                    				<option>A</option>
+                                    				<option>B</option>
+                                    				<option>AB</option>
+                                    				<option>O</option>
+                                    			</select>
+                                    		</div>
+                                    	</div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Hobi</label>
+                                                <textarea name="hobi" rows="5" class="form-control" placeholder="Jl. Melati ....." value="<?php echo $pelamar->hobi ?>"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
+                                    <div class="clearfix"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-user">
+                            <div class="image">
+                                <img src="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400" alt="..."/>
+                            </div>
+                            <div class="content">
+                                <div class="author">
+                                     <a href="#">
+                                     	<?php if($pelamar->pas_foto != "") { ?>
+                                    <img class="avatar border-gray" src="<?php echo base_url('assets/upload/pelamar/img/'.$pelamar->pas_foto)?>" alt="..."/>
+                                    <?php } else { ?>
 										<img src="<?php echo base_url('assets/image/icon.png')?>" alt="Gambar Profile" height="90px">
 									<?php } ?>
-								</td>
-							</tr>
-							<tr><td style="text-align: center;" ><b><?php echo $this->session->userdata('nama_pelamar'); ?></b></td></tr>
-							<tr><td style="text-align: center;" >
-								<a href="<?php echo site_url('pelamar/dashboard') ?>"><button type="button" class="btn btn-info">Lihat Profile</button></a>
-							</td></tr>
-							<?php echo form_open_multipart('pelamar/Dashboard/updateAva'); ?>
-								<tr><td><input type="file" name="avapelamar" class="form-control"></td></tr>
-								<tr><td style="text-align: center;"><input type="submit" class="btn btn-info btn-sm" name="submit" value="Update Foto"></td></tr>	
-							<?php echo form_close(); ?>
+
+                                      <h4 class="title"><?php echo $this->session->userdata('nama_pelamar'); ?><br />
+                                         <small><?php echo $this->session->userdata('email_pelamar'); ?></small>
+                                      </h4>
+                                    </a>
+
+								
+										
+									
+                                </div>
+                                <p class="description text-center"> "Lamborghini Mercy <br>
+                                                    Your chick she so thirsty <br>
+                                                    I'm in that two seat Lambo"
+                                </p>
+                            </div>
+                            <hr>
+                            <?php echo form_open_multipart('pelamar/Dashboard/updateAva'); ?>
+								<button href="#" class="btn btn-simple"><input type="file" name="avapelamar"></button>
+								
+									
 							
-						</table>
-<h1>Anda login sebagai :<?php echo $this->session->userdata('nama_pelamar'); ?></h1>
-<a href="<?php echo site_url('pelamar/Auth/logOut') ?>">Logout</a>
-<form>
-	<input type="text" name="nama_pelamar" value="<?php echo $pelamar->nama_pelamar; ?>">
-	<input type="password" name="alamat_pelamar" value="<?php echo $pelamar->alamat_pelamar; ?>">
-	<input type="text" name="email_pelamar" value="<?php echo $pelamar->email_pelamar; ?>">
-	<input type="password" name="email_pelamar"  value="<?php echo $pelamar->password_pelamar; ?>">
-	
-</form>
+                            <div class="text-center">
+                            	<button type="submit" name="submit" class="btn btn-info btn-fill pull-right">Update</button>
+                                <button href="#" class="btn btn-simple"><i class="fa fa-facebook-square"></i></button>
+                                <button href="#" class="btn btn-simple"><i class="fa fa-twitter"></i></button>
+                                <button href="#" class="btn btn-simple"><i class="fa fa-google-plus-square"></i></button>
+
+                            </div>
+                            <?php echo form_close(); ?>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>

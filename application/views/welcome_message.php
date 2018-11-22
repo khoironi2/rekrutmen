@@ -6,7 +6,6 @@
 	<title>Rekrutmen</title>
 
 
-=======
 	<meta charset="utf-8">
 	<title>Welcome to Rekrutmen</title>
 

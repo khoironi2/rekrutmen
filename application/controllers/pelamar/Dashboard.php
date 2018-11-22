@@ -24,6 +24,10 @@
 			$this->template->load('template2','pelamar/Dashboard', $data);
 		}
 
+		public function updateBiodata(){
+			
+		}
+
 		public function updateAva() {
 		//CONFIGURASI UPLOAD IMAGE
 		$config['upload_path'] 		= './assets/upload/pelamar/img';
