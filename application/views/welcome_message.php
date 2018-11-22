@@ -4,11 +4,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
+	<title>Welcome to Rekrutmen</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/style.css') ?>">
 	<link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets/image/icon.png') ?>" />
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.css') ?>">
-	<!-- css bootstrap -->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/style.css') ?>">
 	
 </head>
@@ -31,8 +30,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
 
             <div class="navbar-nav ml-auto">
-                  <a class="nav-item btn btn-outline-danger tombol" href="<?php echo site_url('pelamar/auth') ?>">Sig In</a>
-                  <a class="nav-item btn btn-outline-danger tombol" href="<?php echo site_url('pelamar/auth/daftar') ?>">Create Account</a>
+                  <a class="nav-item btn btn-outline-primary tombol" href="<?php echo site_url('pelamar/auth') ?>">Sig In</a>
+                  <a class="nav-item btn btn-outline-primary tombol" href="<?php echo site_url('pelamar/auth/daftar') ?>">Create Account</a>
             </div>
          </div>
       </div>
@@ -49,17 +48,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </ol>
       <div class="carousel-inner">
          <div class="carousel-item active">
-            <img class="d-block w-100" src="<?php echo base_url('assets/image/header/header-1.jpg') ?>" alt="First slide">
+            <img class="d-block w-100" src="<?php echo base_url('assets/image/header/slider-1.jpg') ?>" alt="First slide">
             <!-- <div class="carousel-caption d-none d-md-block">
                <h5>Lorem ipsum dolor sit amet.</h5>
                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div> -->
          </div>
          <div class="carousel-item">
-            <img class="d-block w-100" src="<?php echo base_url('assets/image/header/header-2.jpg') ?>" alt="Second slide">
+            <img class="d-block w-100" src="<?php echo base_url('assets/image/header/slider-1.jpg') ?>" alt="Second slide">
          </div>
          <div class="carousel-item">
-            <img class="d-block w-100" src="<?php echo base_url('assets/image/header/header-3.jpg') ?>" alt="Third slide">
+            <img class="d-block w-100" src="<?php echo base_url('assets/image/header/slider-1.jpg') ?>" alt="Third slide">
          </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -78,7 +77,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
    <div class="jumbotron info">
       <div class="justify-content-center text-center">
          <h3 class="font-weight-bold text-muted">Saat ini terdapat 
-         <a href="" class="btn btn-danger tombol font-weight-bold">1 Available Job(s)</a></h3>
+         <a href="" class="btn btn-primary tombol font-weight-bold">1 Available Job(s)</a></h3>
       </div>
    </div>
    <!-- akhir Info JOB -->
@@ -99,7 +98,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <div class="card-body">
                      <h5 class="card-title">Article title</h5>
                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                     <a href="#" class="btn btn-danger tombol btn-block">Lihat Detail</a>
+                     <a href="#" class="btn btn-primary tombol btn-block">Lihat Detail</a>
                   </div>
                </div>
             </div>
@@ -110,7 +109,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <div class="card-body">
                      <h5 class="card-title">Article title</h5>
                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                     <a href="#" class="btn btn-danger tombol btn-block">Lihat Detail</a>
+                     <a href="#" class="btn btn-primary tombol btn-block">Lihat Detail</a>
                   </div>
                </div>
             </div>
@@ -121,7 +120,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <div class="card-body">
                      <h5 class="card-title">Article title</h5>
                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                     <a href="#" class="btn btn-danger tombol btn-block">Lihat Detail</a>
+                     <a href="#" class="btn btn-primary tombol btn-block">Lihat Detail</a>
                   </div>
                </div>
             </div>
