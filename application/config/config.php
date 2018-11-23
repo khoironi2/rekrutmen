@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
-$config['base_url'] = 'http://localhost/rekrutmen/';
+$config['base_url'] = 'http://localhost/abdulrosyid/2019/rekrutmen/';
 
 
 /*
