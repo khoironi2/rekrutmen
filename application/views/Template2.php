@@ -53,51 +53,51 @@
 
             <ul class="nav">
                 <li class="active">
-                    <a href="dashboard.html">
+                    <a href="<?php echo site_url('pelamar/Dashboard') ?>">
                         <i class="pe-7s-user"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li>
-                    <a href="user.html">
-                        <i class="pe-7s-user"></i>
-                        <p>User Profile</p>
+                    <a href="<?php echo site_url('pelamar/Pendidikan') ?>">
+                         <i class="pe-7s-portfolio"></i>
+                        <p>PENDIDIKAN</p>
                     </a>
                 </li>
                 <li>
-                    <a href="table.html">
+                    <a href="<?php echo site_url('pelamar/Organisasi') ?>">
                         <i class="pe-7s-note2"></i>
-                        <p>Table List</p>
+                        <p>ORGANISASI</p>
                     </a>
                 </li>
                 <li>
-                    <a href="typography.html">
+                    <a href="<?php echo site_url('pelamar/Pengalaman_kerja') ?>">
                         <i class="pe-7s-news-paper"></i>
-                        <p>Typography</p>
+                        <p>pengalaman kerja</p>
                     </a>
                 </li>
                 <li>
-                    <a href="icons.html">
+                    <a href="<?php echo site_url('pelamar/Prestasi') ?>">
                         <i class="pe-7s-science"></i>
-                        <p>Icons</p>
+                        <p>prestasi</p>
                     </a>
                 </li>
                 <li>
-                    <a href="maps.html">
+                    <a href="<?php echo site_url('pelamar/Sertifikasi') ?>">
                         <i class="pe-7s-map-marker"></i>
-                        <p>Maps</p>
+                        <p>sertifikasi</p>
                     </a>
                 </li>
                 <li>
-                    <a href="notifications.html">
+                    <a href="<?php echo site_url('pelamar/English_sertifikasi') ?>">
                         <i class="pe-7s-bell"></i>
-                        <p>Notifications</p>
+                        <p>english sertifikasi</p>
                     </a>
                 </li>
 				<li class="active-pro">
-                    <a href="upgrade.html">
+                    <a href="<?php echo site_url('pelamar/Dokumen') ?>">
                         <i class="pe-7s-rocket"></i>
-                        <p>Upgrade to PRO</p>
+                        <p>Dokumen</p>
                     </a>
                 </li>
             </ul>
@@ -114,12 +114,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Dashboard</a>
+                    <a class="navbar-brand" href="<?php echo site_url('pelamar/Dashboard') ?>">Dashboard</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
                         <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <a href="<?php echo site_url('pelamar/Dashboard') ?>" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-dashboard"></i>
 								<p class="hidden-lg hidden-md">Dashboard</p>
                             </a>

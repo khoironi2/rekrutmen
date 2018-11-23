@@ -69,4 +69,14 @@ class Model_pelamar extends CI_Model{
 
 		return $result->row();
 	}
+
+	public function updateBiodataPelamar($id, $data) {
+		$this->db->where('id_pelamar', $id);
+		$this->db->update('pelamar', $data);
+
+		if($this->db->affected_rows() > 0)
+			return true;
+		else
+			return false;
+	}
 }

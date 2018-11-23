@@ -6,21 +6,31 @@
                         <div class="card">
                             <div class="header">
                                 <h4 class="title">Edit Profile</h4>
+                                <?php 
+                echo validation_errors('<p style="color:red">','</p>'); 
+                
+                if($this->session->flashdata('sukses')) {
+                    echo "<p style='color:red'>";
+                    echo $this->session->flashdata('sukses');
+                    echo "</p>";
+                }
+            ?>
                             </div>
                             <div class="content">
-                                <form>
+                                <form action="<?php echo site_url('pelamar/Dashboard/doupdate') ?>" method="POST" class="login100-form validate-form">
                                     <div class="row">
                                         <div class="col-md-5">
                                             <div class="form-group">
+                                                <input type="text" name="id_pelamar" value="<?php echo $this->session->userdata('id_pelamar') ?>" hidden>
                                                 <label>Alamat Email</label>
-                                                <input type="text" class="form-control" disabled placeholder="Company" value="<?php echo $pelamar->email_pelamar; ?>">
+                                                <input required type="text" class="form-control" disabled placeholder="Company" value="<?php echo $pelamar->email_pelamar; ?>">
                                             </div>
                                         </div>
                                        
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Telpon</label>
-                                                <input type="email" class="form-control" value="<?php echo $pelamar->notelp_pelamar; ?>">
+                                                <input type="text" name="notelp_pelamar" class="form-control input100" value="<?php echo $pelamar->notelp_pelamar; ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -29,13 +39,13 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Nama Lengkap</label>
-                                                <input type="text" class="form-control" placeholder="Company" value="<?php echo $pelamar->nama_pelamar; ?>">
+                                                <input type="text" name="nama_pelamar" class="form-control" placeholder="Company" value="<?php echo $pelamar->nama_pelamar; ?>">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>kewarganegaraan</label>
-                                                <input type="text" class="form-control" placeholder="Indonesia" value="<?php echo $pelamar->kewarganegaraan; ?>">
+                                                <input type="text" class="form-control" name="kewarganegaraan" placeholder="Indonesia" value="<?php echo $pelamar->kewarganegaraan; ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -44,7 +54,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Alamat KTP</label>
-                                                <input type="text" class="form-control" placeholder="Home Address" value="<?php echo $pelamar->alamat_pelamar ?>">
+                                                <input type="text" class="form-control" name="alamat_pelamar" placeholder="Home Address" value="<?php echo $pelamar->alamat_pelamar ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -52,7 +62,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Alamat Domisili</label>
-                                                <input type="text" class="form-control" placeholder="Home Address" value="<?php echo $pelamar->alamat_domisili ?>">
+                                                <input type="text" name="alamat_domisili" class="form-control" placeholder="Home Address" value="<?php echo $pelamar->alamat_domisili ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -61,7 +71,7 @@
                                         <div class="col-md-2">
                                             <div class="form-group">
                                                 <label>Umur</label>
-                                                <input type="text" class="form-control" placeholder="Umur" value="<?php echo $pelamar->umur_pelamar ?>">
+                                                <input type="text" class="form-control" name="umur_pelamar" placeholder="Umur" value="<?php echo $pelamar->umur_pelamar ?>">
                                             </div>
                                         </div>
                                         <div class="col-md-3">
@@ -80,7 +90,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Tanggal Lahir</label>
-                                                <input type="date" class="form-control" value="<?php echo $pelamar->tgl_lahir_pelamar ?>">
+                                                <input type="date" class="form-control" name="tgl_lahir_pelamar" value="<?php echo $pelamar->tgl_lahir_pelamar ?>">
                                             </div>
                                         </div>
                                         <div class="col-md-3">
@@ -111,15 +121,19 @@
                                     	<div class="col-md-4">
                                     		<div class="form-group">
                                     			<label>Agama</label>
-                                    			<select class="form-control" name="id_agama">
-                                    				<option>Islam</option>
+                                                <select class="form-control" name="id_agama">
+                                                    <?php foreach ($agama as $aga): ?>
+                                    				<option value="<?php echo $aga->id_agama ?>">
+                                                        <?php echo $aga->agama; ?>
+                                                        <?php endforeach ?>
+                                                    </option>
                                     			</select>
                                     		</div>
                                     	</div>
                                     	<div class="col-md-2">
                                     		<div class="form-group">
                                     			<label>Gol Darah</label>
-                                    			<select class="form-control" name="id_agama">
+                                    			<select class="form-control" name="gol_darah">
                                     				<option><?php echo $pelamar->gol_darah; ?></option>
                                     				<option>A</option>
                                     				<option>B</option>
@@ -134,7 +148,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Hobi</label>
-                                                <textarea name="hobi" rows="5" class="form-control" placeholder="Jl. Melati ....." value="<?php echo $pelamar->hobi ?>"></textarea>
+                                                <textarea name="hobi" rows="5" class="form-control" placeholder="Jl. Melati ....." ><?php echo $pelamar->hobi ?></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -147,31 +161,19 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card card-user">
-                            <div class="image">
-                                <img src="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400" alt="..."/>
+                           <div class="header">
+                                <h4 class="title"><b>PAS FOTO</b></h4>
+                                
                             </div>
                             <div class="content">
-                                <div class="author">
-                                     <a href="#">
-                                     	<?php if($pelamar->pas_foto != "") { ?>
-                                    <img class="avatar border-gray" src="<?php echo base_url('assets/upload/pelamar/img/'.$pelamar->pas_foto)?>" alt="..."/>
+                                <?php if($pelamar->pas_foto != "") { ?>
+                                    <img class="img-thumbnail" src="<?php echo base_url('assets/upload/pelamar/img/'.$pelamar->pas_foto)?>" alt="..."/>
                                     <?php } else { ?>
-										<img src="<?php echo base_url('assets/image/icon.png')?>" alt="Gambar Profile" height="90px">
-									<?php } ?>
+                                        <img class="img-thumbnail" src="<?php echo base_url('assets/image/avatar.jpg')?>" alt="Gambar Profile">
+                                    <?php } ?>
 
-                                      <h4 class="title"><?php echo $this->session->userdata('nama_pelamar'); ?><br />
-                                         <small><?php echo $this->session->userdata('email_pelamar'); ?></small>
-                                      </h4>
-                                    </a>
-
-								
-										
-									
-                                </div>
-                                <p class="description text-center"> "Lamborghini Mercy <br>
-                                                    Your chick she so thirsty <br>
-                                                    I'm in that two seat Lambo"
-                                </p>
+                               
+                                
                             </div>
                             <hr>
                             <?php echo form_open_multipart('pelamar/Dashboard/updateAva'); ?>
@@ -181,6 +183,38 @@
 							
                             <div class="text-center">
                             	<button type="submit" name="submit" class="btn btn-info btn-fill pull-right">Update</button>
+                                <button href="#" class="btn btn-simple"><i class="fa fa-facebook-square"></i></button>
+                                <button href="#" class="btn btn-simple"><i class="fa fa-twitter"></i></button>
+                                <button href="#" class="btn btn-simple"><i class="fa fa-google-plus-square"></i></button>
+
+                            </div>
+                            <?php echo form_close(); ?>
+                        </div>
+                        <!-- foto ful badan-->
+                        <div class="card card-user">
+                            <div class="header">
+                                <h4 class="title"><b>FOTO FULL BADAN</b></h4>
+                                
+                            </div>
+                            <div class="content">
+                                <?php if($pelamar->foto_full_badan != "") { ?>
+                                    <img class="img-thumbnail" src="<?php echo base_url('assets/upload/pelamar/img/Full/'.$pelamar->foto_full_badan)?>" alt="..."/>
+                                    <?php } else { ?>
+                                        <img class="img-thumbnail" src="<?php echo base_url('assets/image/avatar.jpg')?>" alt="Gambar Profile">
+                                    <?php } ?>
+
+                               
+                                
+                            </div>
+                           
+                            <hr>
+                            <?php echo form_open_multipart('pelamar/Dashboard/updateAvaFull'); ?>
+                                <button href="#" class="btn btn-simple"><input type="file" name="avapetinju"></button>
+                                
+                                    
+                            
+                            <div class="text-center">
+                                <button type="submit" name="submit" class="btn btn-info btn-fill pull-right">Update</button>
                                 <button href="#" class="btn btn-simple"><i class="fa fa-facebook-square"></i></button>
                                 <button href="#" class="btn btn-simple"><i class="fa fa-twitter"></i></button>
                                 <button href="#" class="btn btn-simple"><i class="fa fa-google-plus-square"></i></button>
